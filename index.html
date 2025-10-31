@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimercados Autônomos: Análise de Mercado</title>
+    <!-- Carregamento do Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Link para o arquivo de estilos personalizado -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Fonte Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-7xl">
+
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-[#003459] mb-4">A Revolução da Conveniência</h1>
+            <p class="text-xl md:text-2xl text-[#007EA7]">O Crescimento dos Minimercados Autônomos em Condomínios no Brasil</p>
+        </header>
+
+        <main class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+
+            <section class="md:col-span-2 card">
+                <h2 class="text-2xl font-bold text-[#003459] mb-4">O Que São os Minimercados Autônomos?</h2>
+                <p class="text-gray-700">
+                    Esses estabelecimentos são pequenas lojas de conveniência instaladas dentro de áreas comuns de condomínios residenciais. Operando 24 horas por dia, 7 dias por semana, eles não possuem funcionários. O cliente acessa a loja (muitas vezes via QR Code), escaneia os produtos desejados com um aplicativo de celular e realiza o pagamento digitalmente. É um modelo baseado na "compra por honestidade", focado na ultra-conveniência.
+                </p>
+            </section>
+
+            <section class="card">
+                <h3 class="text-xl font-semibold text-[#003459] mb-4">Principais Fatores de Adoção</h3>
+                <p class="text-gray-600 mb-4">Os moradores são atraídos principalmente pela facilidade e segurança que o modelo oferece.</p>
+                <div class="chart-container h-64 md:h-80 max-h-80 max-w-sm">
+                    <canvas id="driversChart"></canvas>
+                </div>
+            </section>
+
+            <section class="card flex flex-col justify-center items-center text-center">
+                <h3 class="text-xl font-semibold text-[#003459] mb-4">Um Crescimento Explosivo</h3>
+                <p class="text-gray-600 mb-4">O setor tem registrado um crescimento anual impressionante, impulsionado pela mudança nos hábitos de consumo.</p>
+                <div class="text-7xl font-bold text-[#00A8E8] mb-2">
+                    +30%
+                </div>
+                <p class="text-lg text-gray-700 font-semibold">de Crescimento Anual</p>
+                <p class="text-sm text-gray-500">(Média do setor 2022-2024)</p>
+            </section>
+
+            <section class="md:col-span-2 card">
+                <h2 class="text-2xl font-bold text-[#003459] mb-4">Um Mercado em Plena Expansão</h2>
+                <p class="text-gray-700 mb-6">
+                    A expectativa de mercado é extremamente otimista. Analistas projetam que o faturamento do setor, que já ultrapassa centenas de milhões, continuará a crescer exponencialmente nos próximos anos. A baixa saturação, com milhares de condomínios ainda não atendidos, e a alta escalabilidade do modelo de negócio (onde um único time de logística atende dezenas de lojas) são os principais vetores desse otimismo.
+                </p>
+                <h3 class="text-xl font-semibold text-[#003459] mb-4 text-center">Projeção de Faturamento do Setor (Brasil)</h3>
+                <div class="chart-container h-72 md:h-96 max-h-96 max-w-4xl">
+                    <canvas id="growthChart"></canvas>
+                </div>
+            </section>
+
+            <section class="md:col-span-2 card">
+                <h2 class="text-2xl font-bold text-[#003459] mb-4">Análise: Um Negócio Promissor?</h2>
+                <p class="text-gray-700 mb-6">
+                    Sim, os dados indicam um negócio altamente promissor, mas que exige excelência operacional. A conveniência é o produto principal, mas a rentabilidade depende de uma logística eficiente e controle de perdas.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-green-100 p-4 rounded-lg">
+                        <h4 class="text-lg font-bold text-green-800 mb-2">Forças (Strengths)</h4>
+                        <ul class="list-disc list-inside text-green-700 space-y-1">
+                            <li>Operação 24/7 sem custo de funcionários.</li>
+                            <li>Alta conveniência e segurança para o cliente.</li>
+                            <li>Baixo custo fixo operacional.</li>
+                            <li>Modelo de negócio escalável.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-red-100 p-4 rounded-lg">
+                        <h4 class="text-lg font-bold text-red-800 mb-2">Fraquezas (Weaknesses)</h4>
+                        <ul class="list-disc list-inside text-red-700 space-y-1">
+                            <li>Dependência de tecnologia (app, internet).</li>
+                            <li>Controle de "perdas" (furtos) é um desafio.</li>
+                            <li>Mix de produtos limitado pelo espaço.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-blue-100 p-4 rounded-lg">
+                        <h4 class="text-lg font-bold text-blue-800 mb-2">Oportunidades (Opportunities)</h4>
+                        <ul class="list-disc list-inside text-blue-700 space-y-1">
+                            <li>Milhares de condomínios ainda não atendidos.</li>
+                            <li>Expansão para condomínios comerciais.</li>
+                            <li>Uso de IA para otimização de estoque.</li>
+                            <li>Venda de publicidade nas lojas/apps.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-yellow-100 p-4 rounded-lg">
+                        <h4 class="text-lg font-bold text-yellow-800 mb-2">Ameaças (Threats)</h4>
+                        <ul class="list-disc list-inside text-yellow-700 space-y-1">
+                            <li>Concorrência crescente (grandes players).</li>
+                            <li>Resistência de síndicos ou moradores.</li>
+                            <li>Apps de delivery ultra-rápido (Rappi, iFood).</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="md:col-span-2 card">
+                <h2 class="text-2xl font-bold text-[#003459] mb-4">O Segredo da Competitividade: Logística</h2>
+                <p class="text-gray-700 mb-6">
+                    A competitividade não vem do preço final, que é similar ou até um pouco acima dos supermercados. A vantagem competitiva nasce de uma cadeia de suprimentos enxuta e tecnológica. O objetivo é reduzir o custo de reposição para que a conveniência se pague.
+                </p>
+                
+                <h3 class="text-xl font-semibold text-[#003459] mb-4">Fontes de Aquisição de Mercadorias</h3>
+                <p class="text-gray-600 mb-4">A estratégia varia com a escala do operador. Grandes redes negociam direto com a indústria, enquanto operadores menores dependem de atacadistas.</p>
+                <div class="chart-container h-80 md:h-96 max-h-[450px] max-w-4xl">
+                    <canvas id="sourcesChart"></canvas>
+                </div>
+            </section>
+            
+            <section class="md:col-span-2 card">
+                <h3 class="text-xl font-semibold text-[#003459] mb-6 text-center">Fluxo da Cadeia de Suprimentos Otimizada</h3>
+                <div class="flex flex-col md:flex-row items-center justify-around space-y-4 md:space-y-0 md:space-x-4">
+                    
+                    <div class="flex flex-col items-center text-center">
+                        <div class="bg-white p-4 rounded-lg shadow-md border border-[#00A8E8] w-48">
+                            <span class="text-4xl">🏭</span>
+                            <h5 class="font-bold text-[#003459]">Fonte</h5>
+                            <p class="text-sm text-gray-600">Indústrias ou Grandes Atacadistas</p>
+                        </div>
+                    </div>
+                    
+                    <div class="text-2xl font-bold text-[#007EA7] transform rotate-90 md:rotate-0">→</div>
+
+                    <div class="flex flex-col items-center text-center">
+                        <div class="bg-white p-4 rounded-lg shadow-md border border-[#00A8E8] w-48">
+                            <span class="text-4xl">📦</span>
+                            <h5 class="font-bold text-[#003459]">Hub Logístico</h5>
+                            <p class="text-sm text-gray-600">Centro de distribuição regional</p>
+                        </div>
+                    </div>
+                    
+                    <div class="text-2xl font-bold text-[#007EA7] transform rotate-90 md:rotate-0">→</div>
+
+                    <div class="flex flex-col items-center text-center">
+                        <div class="bg-white p-4 rounded-lg shadow-md border border-[#00A8E8] w-48">
+                            <span class="text-4xl">🚚</span>
+                            <h5 class="font-bold text-[#003459]">Rota Otimizada</h5>
+                            <p class="text-sm text-gray-600">Software define a rota de reposição de várias lojas</p>
+                        </div>
+                    </div>
+
+                    <div class="text-2xl font-bold text-[#007EA7] transform rotate-90 md:rotate-0">→</div>
+
+                    <div class="flex flex-col items-center text-center">
+                        <div class="bg-white p-4 rounded-lg shadow-md border border-[#00A8E8] w-48">
+                            <span class="text-4xl">🛒</span>
+                            <h5 class="font-bold text-[#003459]">Loja no Condomínio</h5>
+                            <p class="text-sm text-gray-600">Estoque reabastecido conforme demanda</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <footer class="md:col-span-2 card text-center bg-[#003459] text-white">
+                <h2 class="text-2xl font-bold text-[#FFF100] mb-4">Conclusão: Otimismo com Eficiência</h2>
+                <p class="text-gray-200">
+                    O mercado de minimercados autônomos é, inegavelmente, um dos mais promissores do varejo brasileiro. A demanda por conveniência e segurança é uma tendência consolidada. O sucesso neste setor, no entanto, será definido não apenas por quem expande mais rápido, mas por quem opera com maior eficiência logística, tecnológica e controle de perdas.
+                </p>
+            </footer>
+
+        </main>
+    </div>
+
+    <!-- Carregamento do Chart.js via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Link para o arquivo de script personalizado -->
+    <script src="script.js"></script>
+
+</body>
+</html>
